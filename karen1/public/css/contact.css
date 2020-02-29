@@ -1,10 +1,6 @@
+/* 共通部分 */
 body {
-    /* font-family: 'Lato'; */
-    /* font-family: 'Source Sans Pro' ; */
-    /* font-family: 'Fira Sans' ; */
-    /* font-family: 'Spartan'; */
     font-family: 'Montserrat','Sawarabi Gothic','Noto Sans JP';
-    /* font-family: 'Raleway',; */
 }
 
 .bg{
@@ -62,22 +58,6 @@ header {
     display: flex;
     justify-content: space-between;
     height: 48px;
-}
-
-/* PC用 */
-@media screen and (min-width:780px){
-    .sf {
-        display: none;
-    }
-
-}
-
-/* スマホ用 */
-@media screen and (max-width:781px){
-    .pc {
-        display: none;
-    }
-
 }
 
 .nav {
@@ -145,6 +125,13 @@ header {
     margin-bottom:24px;
 }
 
+/* 表示非表示の切り替え用 */
+.none{
+    display: none;
+}
+
+/* 共通部分 */
+
 .content2 a:hover,.sf:hover{
     border:none;
 }
@@ -169,9 +156,18 @@ header {
     margin:32px 0;
 }
 
-/* 表示非表示の切り替え用 */
-.none{
-    display: none;
-}
-    
+/* PC用 */
+@media screen and (min-width:780px){
+    .sf {
+        display: none;
+    }
 
+}
+
+/* スマホ用 */
+@media screen and (max-width:781px){
+    .pc {
+        display: none;
+    }
+
+}
