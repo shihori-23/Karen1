@@ -57,50 +57,11 @@
             <div class="content1">
                 <h2>- contact</h2>
             </div>
-            <div class="form_container">
-                <form action="{{ url('/mail/send') }}" method="post" enctype="multipart/form-data">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <div>
-                        <label for="exampleInputName">name</label>
-                        @if ($errors->has('name')) 
-                            <span class="error">お名前を入力してください</span>
-                        @endif
-                        </div>
-                        <input type="text" class="form-control" name="name" id="exampleInputName" placeholder="お名前を入力してください">
-                    </div>
-                    <div class="form-group">
-                        <div>
-                        <label for="exampleInputEmail1">email</label>
-                        @if ($errors->has('email')) 
-                            <span class="error">アドレスを入力してください</span>
-                        @endif
-                        </div>
-                        <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="アドレスを入力してください">
-                    </div>
-                    <div class="form-group">
-                        <div>
-                        <label for="exampleInputEmail1">subject</label>
-                        @if ($errors->has('email')) 
-                            <span class="error">件名を入力してください</span>
-                        @endif
-                        </div>
-                        <input type="text" class="form-control" name="subject" id="exampleInputEmail1" placeholder="(例)お仕事の依頼、作品撮りに関して">
-                    </div>
-                    <div class="form-group">
-                        <div>
-                        <label for="exampleInputEmail1">message</label>
-                        @if ($errors->has('email')) 
-                            <span class="error">お問い合わせ内容を入力してください</span>
-                        @endif
-                        </div>
-                        <textarea class="form-control" name="text" rows="5" id="exampleInputEmail1" placeholder="お問い合わせ内容を入力してください"></textarea>
-                    </div>
-                    <div class="btn_wrapper">
-                        <button type="submit" class="btn btn-primary submit_btn">submit</button>
-                    </div>
-                </form>
-            </div>
+            <p class="sended_message">
+                お問い合わせいただき、ありがとうございます。<br>
+                お返事まで数日いただく場合がございます。<br>
+                よろしくお願いいたします。
+            </p>
         </div>
 
     <script src="{{ asset('js/jquery-2.1.3.min.js') }}"></script>

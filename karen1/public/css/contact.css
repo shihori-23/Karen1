@@ -6,12 +6,13 @@ body {
 .bg{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: url(../img/top.png);
     background-size: cover;
     opacity: 0.4;
+    z-index: -1;
 }
 
 h1 {
@@ -58,6 +59,7 @@ header {
     display: flex;
     justify-content: space-between;
     height: 48px;
+    z-index: 1000;
 }
 
 .nav {
@@ -83,6 +85,11 @@ header {
 
 .nav_li{
     margin:1em 0;
+}
+
+.active{
+    opacity: 0.7;
+    pointer-events:none;
 }
 
 #menu_bar {
@@ -146,20 +153,76 @@ header {
     margin:32px 0;
 }
 
-.wrap h1{
-    font-size: 1.5em;
-    margin:32px 0;
+    
+.form_container{
+    width: 90%;
+    margin:0 auto;
+    color: #8E9057;
+    letter-spacing: 0.2em;
 }
 
-.wrap p{
-    font-size: 1em;
-    margin:32px 0;
+.form-group {
+    margin-top:8px;
+}
+
+.form_container input,
+.form_container textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 8px;
+    margin:8px 0;
+    border: 1px solid #8E9057;
+}
+
+.form-group span {
+    font-size: 0.2em;
+    color:#993333;
+    letter-spacing: 0.1em;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+.btn_wrapper{
+    text-align: center;
+}
+
+.submit_btn{
+    background-color: #8E9057;
+    border:2px solid #8E9057;
+    color: #fffefe;
+    padding:8px 24px;
+    margin: 16px auto;
+    font-size:1em;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+
+.submit_btn:hover{
+    background-color:#ffffee;
+    color: #8E9057;
+}
+
+/* メール送信後の画面 */
+.sended_message {
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
 }
 
 /* PC用 */
 @media screen and (min-width:780px){
     .sf {
         display: none;
+    }
+
+    .form_container{
+        width: 60%;
     }
 
 }
@@ -171,3 +234,5 @@ header {
     }
 
 }
+
+

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Suzuki Karen</title>
+        <title>Karen Suzuki</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
         <div class="wrap">
             <div class="main_title">
                 <p class="sub_txt">hair & make</p>
-                <h1 class="txt">Suzuki Karen</h1>
+                <h1 class="txt">Karen Suzuki</h1>
             </div>
             <div class="nav_container">
                 <ul class="nav">

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Suzuki Karen</title>
+        <title>Karen Suzuki</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -19,15 +19,15 @@
         <div class="bg"></div>
         <header>
             <div class="main_title">
-                <h1 class="txt">Suzuki Karen</h1>
+                <h1 class="txt">Karen Suzuki</h1>
             </div>
             <div class="nav_container pc">
                 <ul class="nav">
                     <li class="nav_li"><a href="/">home</a></li>
-                    <li class="nav_li active"><a class="disable" href="">about</a></li>
+                    <li class="nav_li active"><a class="active" href="">about</a></li>
                     <li class="nav_li"><a href="/personalworks">personal works</a></li>
-                    <li class="nav_li"><a href="works">works</a></li>
-                    <li class="nav_li"><a href="contact">contact</a></li>
+                    <li class="nav_li"><a href="/works">works</a></li>
+                    <li class="nav_li"><a href="/contact">contact</a></li>
                 </ul>
             </div>
             <a class="sf" id="menuBtn">
@@ -59,7 +59,7 @@
         </div>  
         <div class="wrap">
             <div class="content1">
-                <h2>ー about</h2>
+                <h2>- about</h2>
                 <h1>鈴木 かれん</h1>
                 <p>紹介文が入ります。かれんの紹介文とか経歴とかを載せる</p>
             </div>

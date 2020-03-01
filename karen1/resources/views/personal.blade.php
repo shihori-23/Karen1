@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Suzuki Karen</title>
+        <title>Karen Suzuki</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -19,15 +19,15 @@
         <div class="bg"></div>
         <header>
             <div class="main_title">
-                <h1 class="txt">Suzuki Karen</h1>
+                <h1 class="txt">Karen Suzuki</h1>
             </div>
             <div class="nav_container pc">
                 <ul class="nav">
                     <li class="nav_li"><a href="/">home</a></li>
-                    <li class="nav_li active"><a class="disable" href="/about">about</a></li>
-                    <li class="nav_li"><a href="/personalworks">personal works</a></li>
-                    <li class="nav_li"><a href="works">works</a></li>
-                    <li class="nav_li"><a href="contact">contact</a></li>
+                    <li class="nav_li"><a href="/about">about</a></li>
+                    <li class="nav_li active"><a class="active" href="/personalworks">personal works</a></li>
+                    <li class="nav_li"><a href="/works">works</a></li>
+                    <li class="nav_li"><a href="/contact">contact</a></li>
                 </ul>
             </div>
             <a class="sf" id="menuBtn">
@@ -54,10 +54,10 @@
         </div>  
         <div class="wrap">
             <div class="content1">
-                <h2>ー personal works</h2>
+                <h2>- personal works</h2>
             </div>
             <div class="content2">
-                <div class="col_4">
+                <!-- <div class="col_4"> -->
                     <div class="img_wrap">
                         <img src="" alt="">
                     </div>
@@ -70,7 +70,23 @@
                     <div class="img_wrap">
                         <img src="" alt="">
                     </div>
-                </div>
+                    <div class="img_wrap">
+                        <img src="" alt="">
+                    </div>
+                    <div class="img_wrap">
+                        <img src="" alt="">
+                    </div>
+                    <div class="img_wrap">
+                        <img src="" alt="">
+                    </div>
+                    <div class="img_wrap">
+                        <img src="" alt="">
+                    </div>
+                    <div class="img_wrap">
+                        <img src="" alt="">
+                    </div>
+
+                <!-- </div> -->
             </div>
         </div>
 

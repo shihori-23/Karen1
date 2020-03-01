@@ -30,6 +30,18 @@ Route::get('/works', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/contacted', function () {
+    return view('contacted');
+});
+
+//　お問い合わせメール送信
+// Route::get('/mail', 'MailController@index');
+Route::post('/mail/send', 'MailController@send');
+
+// お問い合わせ系
+Route::get('contact/input', 'ContactsController@index');
+Route::post('contact/confirm', 'ContactsController@confirm');
+Route::post('contact/complete', 'ContactsController@complete');
 
 Auth::routes();
 
