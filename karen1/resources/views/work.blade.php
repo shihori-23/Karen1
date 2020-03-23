@@ -31,26 +31,28 @@
                 </ul>
             </div>
             <a class="sf" id="menuBtn">
-                <span>
-                    <i class="fas fa-bars"></i>
-                </span>  
+                <div class="hamburger" id="js-hamburger">
+                    <span class="hamburger__line hamburger__line--1"></span>
+                    <span class="hamburger__line hamburger__line--2"></span>
+                    <span class="hamburger__line hamburger__line--3"></span>
+                </div>  
             </a>
         </div>
         </header>
         <!-- スマホ用のメニュー -->
-        <div class="sf_nav_container　sf" id="menu_bar">
+        <div class="sf_nav_container sf" id="menu_bar">
             <ul class="sf_nav">
                 <li class="nav_li"><a href="/">home</a></li>
-                <li class="nav_li active"><a href="/about">about</a></li>
+                <li class="nav_li"><a href="/about">about</a></li>
                 <li class="nav_li"><a href="/personalworks">personal works</a></li>
-                <li class="nav_li"><a href="works">works</a></li>
+                <li class="nav_li active"><a href="works">works</a></li>
                 <li class="nav_li"><a href="contact">contact</a></li>
             </ul>
-            <a class="sf" id="closeBtn">
-                <span>
-                    <i class="fas fa-times"></i>
-                </span>  
-            </a>
+            <div class="sf none close_btn" id="closeBtn">
+                <span class="line line--1"></span>
+                <span class="line line--2"></span>
+                <span class="line line--3"></span>
+            </div>
         </div>  
         <div class="wrap">
             <div class="content1">
@@ -97,16 +99,51 @@
         $("#menuBtn").on('click',function(){
             console.log("クリックしたよ");
             $('body').toggleClass('open');
-            $('#menuBtn').toggleClass('none');
-            // $('#closeBtn').toggleClass('none');
+            // $('#menuBtn').toggleClass('none');
+            $('#closeBtn').toggleClass('none');
         });
 
         //　閉じるボタン
         $('#closeBtn').on('click',function(){
             $('body').toggleClass('open');
-            $('#menuBtn').toggleClass('none');
-            // $('#closeBtn').toggleClass('none');
+            // $('#menuBtn').toggleClass('none');
+            $('#closeBtn').toggleClass('none');
         })
+
+        function toggleNav() {
+            var body = document.body;
+            var hamburger = document.getElementById('js-hamburger');
+
+            hamburger.addEventListener('click', function() {
+            body.classList.toggle('nav-open');
+            });
+        }
+        toggleNav();
+
+        $(window).on('load scroll', function(){
+
+        //animatedのclassを持った要素をセレクタに指定
+        var elem = $('.animated');
+
+        elem.each(function () {
+
+        //data属性からアニメーション名を取得
+        var isAnimate = $(this).data('animate');
+        //animated要素に位置を取得
+        var elemOffset = $(this).offset().top;
+        //現在のスクロールポジションを取得
+        var scrollPos = $(window).scrollTop();
+        //ウィンドウの高さを取得
+        var wh = $(window).height();
+
+        //animated要素がウィンドウ内の中央位置にきたら処理
+        if(scrollPos > elemOffset - wh + (wh / 6)){
+        $(this).addClass(isAnimate);
+        $(this).removeClass("hidden");
+        }
+        });
+
+    });
 
     </script>
     </body>

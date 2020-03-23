@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Lato:400,700|Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+JP:300,400|Raleway|Sawarabi+Gothic|Spartan&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
         <link rel="stylesheet" href="{{ asset('css/about.css') }}">
         <script src="https://kit.fontawesome.com/0c0068477d.js" crossorigin="anonymous"></script>
@@ -31,15 +32,12 @@
                 </ul>
             </div>
             <a class="sf" id="menuBtn">
-                <span>
-                    <i class="fas fa-bars"></i>
-                </span>  
+                <div class="hamburger" id="js-hamburger">
+                    <span class="hamburger__line hamburger__line--1"></span>
+                    <span class="hamburger__line hamburger__line--2"></span>
+                    <span class="hamburger__line hamburger__line--3"></span>
+                </div>  
             </a>
-            <!-- <a class="sf none" id="closeBtn">
-                <span>
-                    <i class="fas fa-times"></i>
-                </span>  
-            </a> -->
         </div>
         </header>
         <!-- スマホ用のメニュー -->
@@ -51,20 +49,25 @@
                 <li class="nav_li"><a href="works">works</a></li>
                 <li class="nav_li"><a href="contact">contact</a></li>
             </ul>
-            <a class="sf" id="closeBtn">
-                <span>
-                    <i class="fas fa-times"></i>
-                </span>  
-            </a>
+            <div class="sf none close_btn" id="closeBtn">
+                <span class="line line--1"></span>
+                <span class="line line--2"></span>
+                <span class="line line--3"></span>
+            </div>
         </div>  
         <div class="wrap">
             <div class="content1">
                 <h2>- about</h2>
-                <h1>鈴木 かれん</h1>
-                <p>紹介文が入ります。かれんの紹介文とか経歴とかを載せる</p>
+                <h3>鈴木 かれん</h3>
+                <p>1991年　兵庫県神戸市出身</p>
+                <p>2014年　玉川大学　卒業</p>
+                <p>2017年　株式会社ZOZO　退社</p>
+                <p>2018年　バンタンデザイン研究所　卒業</p>
+                <p>2017年　ヘアメイク村上綾氏　師事</p>
+                <p>2020年　独立</p>
             </div>
             <div class="content2">
-                <a href=""><span><i class="fab fa-instagram"></i></span></a>
+                <a href="https://instagram.com/karen___lemon?igshid=468qtrxzr564"><span><i class="fab fa-instagram"></i></span><span>Instagram</span></a>
             </div>
         </div>
 
@@ -76,14 +79,14 @@
             console.log("クリックしたよ");
             $('body').toggleClass('open');
             $('#menuBtn').toggleClass('none');
-            // $('#closeBtn').toggleClass('none');
+            $('#closeBtn').toggleClass('none');
         });
 
         //　閉じるボタン
         $('#closeBtn').on('click',function(){
             $('body').toggleClass('open');
             $('#menuBtn').toggleClass('none');
-            // $('#closeBtn').toggleClass('none');
+            $('#closeBtn').toggleClass('none');
         })
 
     </script>

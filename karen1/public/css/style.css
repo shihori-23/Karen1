@@ -19,12 +19,14 @@ body {
 
 h1 {
     color:#8E9057;
+    opacity: 0.8;
     font-weight: 300;
     letter-spacing: 0.1em; 
 }
 
-h2,p,span,a{
+h2,p,span{
     color:#8E9057;
+    opacity: 0.8;
     font-weight: 300;
     letter-spacing: 0.2em;
 }
@@ -39,14 +41,16 @@ p {
     opacity: 0.8;
 }
 
-a {
+.nav_li a {
     text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 0.2em;
     color:#8E9057;
     padding-bottom:0.5em; 
     opacity: 0.8;
 }
 
-a:hover{
+.nav_li a:hover{
     border-bottom: solid 1px #8E9057;
     opacity: 0.8;
 }

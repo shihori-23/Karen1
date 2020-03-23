@@ -31,9 +31,11 @@
                 </ul>
             </div>
             <a class="sf" id="menuBtn">
-                <span>
-                    <i class="fas fa-bars"></i>
-                </span>  
+                <div class="hamburger" id="js-hamburger">
+                    <span class="hamburger__line hamburger__line--1"></span>
+                    <span class="hamburger__line hamburger__line--2"></span>
+                    <span class="hamburger__line hamburger__line--3"></span>
+                </div>  
             </a>
         </div>
         </header>
@@ -46,11 +48,11 @@
                 <li class="nav_li"><a href="/works">works</a></li>
                 <li class="nav_li active"><a class="active" href="/contact">contact</a></li>
             </ul>
-            <a class="sf" id="closeBtn">
-                <span>
-                    <i class="fas fa-times"></i>
-                </span>  
-            </a>
+            <div class="sf none close_btn" id="closeBtn">
+                <span class="line line--1"></span>
+                <span class="line line--2"></span>
+                <span class="line line--3"></span>
+            </div>
         </div>
 
         <div class="wrap">
@@ -111,14 +113,14 @@
             console.log("クリックしたよ");
             $('body').toggleClass('open');
             $('#menuBtn').toggleClass('none');
-            // $('#closeBtn').toggleClass('none');
+            $('#closeBtn').toggleClass('none');
         });
 
         //　閉じるボタン
         $('#closeBtn').on('click',function(){
             $('body').toggleClass('open');
             $('#menuBtn').toggleClass('none');
-            // $('#closeBtn').toggleClass('none');
+            $('#closeBtn').toggleClass('none');
         })
 
     </script>
