@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&display=swap" rel="stylesheet">        <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Lato:400,700|Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
         <link rel="stylesheet" href="{{ asset('css/personal.css') }}">
@@ -26,8 +26,8 @@
                 <ul class="nav">
                     <li class="nav_li"><a href="/">home</a></li>
                     <li class="nav_li"><a href="/about">about</a></li>
-                    <li class="nav_li active"><a class="active" href="/personalworks">personal works</a></li>
                     <li class="nav_li"><a href="/works">works</a></li>
+                    <li class="nav_li active"><a class="active" href="/personalworks">personal works</a></li>
                     <li class="nav_li"><a href="/contact">contact</a></li>
                 </ul>
             </div>
@@ -45,8 +45,8 @@
             <ul class="sf_nav">
                 <li class="nav_li"><a href="/">home</a></li>
                 <li class="nav_li"><a href="/about">about</a></li>
-                <li class="nav_li active"><a href="/personalworks">personal works</a></li>
                 <li class="nav_li"><a href="works">works</a></li>
+                <li class="nav_li active"><a href="/personalworks">personal works</a></li>
                 <li class="nav_li"><a href="contact">contact</a></li>
             </ul>
             <div class="sf none close_btn" id="closeBtn">
@@ -83,9 +83,6 @@
                         <img src="{{ asset('personal_img/7.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img/8.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/9.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
@@ -96,9 +93,6 @@
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/12.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img/12_1.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/13.jpg') }}" alt="personal_work">
@@ -113,16 +107,19 @@
                         <img src="{{ asset('personal_img/16.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img/17.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/18.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/19.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img/20.jpg') }}" alt="personal_work">
+                        <img src="{{ asset('personal_img/20_1.jpg') }}" alt="personal_work">
+                    </div>
+                    <div class="img_wrap animated hidden" data-animate="fadeIn">
+                        <img src="{{ asset('personal_img/20_2.jpg') }}" alt="personal_work">
+                    </div>
+                    <div class="img_wrap animated hidden" data-animate="fadeIn">
+                        <img src="{{ asset('personal_img/20_3.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated  hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/21.jpg') }}" alt="personal_work">
@@ -137,25 +134,16 @@
                         <img src="{{ asset('personal_img/24.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img/24_1.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/25.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/26.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img/27.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/28.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/29.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img/30.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img2/1.jpg') }}" alt="personal_work">
@@ -167,19 +155,16 @@
                         <img src="{{ asset('personal_img2/3.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/4.jpg') }}" alt="personal_work">
+                        <img src="{{ asset('personal_img2/4_1.jpg') }}" alt="personal_work">
+                    </div>
+                    <div class="img_wrap animated hidden" data-animate="fadeIn">
+                        <img src="{{ asset('personal_img2/4_2.jpg') }}" alt="personal_work">
+                    </div>
+                    <div class="img_wrap animated hidden" data-animate="fadeIn">
+                        <img src="{{ asset('personal_img2/4_3.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img2/5.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/6.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/7.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/8.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img2/9.jpg') }}" alt="personal_work">
@@ -195,9 +180,6 @@
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img2/13.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/14.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img2/15.jpg') }}" alt="personal_work">
@@ -221,16 +203,7 @@
                         <img src="{{ asset('personal_img2/21.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/22.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/23.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img2/24.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/25.jpg') }}" alt="personal_work">
                     </div>
             </div>
         </div>
@@ -270,7 +243,7 @@
         var wh = $(window).height();
 
         //animated要素がウィンドウ内の中央位置にきたら処理
-        if(scrollPos > elemOffset - wh + (wh / 6)){
+        if(scrollPos > elemOffset - wh + (wh / 8)){
             $(this).addClass(isAnimate);
             $(this).removeClass("hidden");
         }

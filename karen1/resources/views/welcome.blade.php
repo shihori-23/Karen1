@@ -10,23 +10,23 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Lato:400,700|Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Spartan&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="{{ asset('/css/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
     </head>
     <body>
         <div class="wrap">
             <div class="main_title">
-                <p class="sub_txt">hair & make</p>
+                <p class="sub_txt">hair & make up</p>
                 <h1 class="txt">Karen Suzuki</h1>
             </div>
             <div class="nav_container">
                 <ul class="nav">
                     <!-- <li class="nav_li"><a href="">home</a></li> -->
                     <li class="nav_li"><a href="/about">about</a></li>
-                    <li class="nav_li"><a href="/personalworks">personal works</a></li>
                     <li class="nav_li"><a href="/works">works</a></li>
+                    <li class="nav_li"><a href="/personalworks">personal works</a></li>
                     <li class="nav_li"><a href="/contact">contact</a></li>
                 </ul>
             </div>

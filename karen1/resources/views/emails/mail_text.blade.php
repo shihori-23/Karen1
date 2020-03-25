@@ -22,4 +22,4 @@
 
 Hair&Make
 Karen Suzuki
-mail:karen@gmail.com
+mail:karen.suzuki.hairmake@gmail.com

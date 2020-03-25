@@ -35,7 +35,7 @@ class MailController extends Controller
         , function($message) use($email) {
             
             $message
-                ->from('info@test.jp')
+                ->from('karen.suzuki.hairmake@gmail.com')
                 ->to($email)
                 ->subject("お問い合わせありがとうございます。");
         });

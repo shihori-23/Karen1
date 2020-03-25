@@ -1,6 +1,6 @@
 /* 共通部分 */
 body {
-    font-family: 'Montserrat','Sawarabi Gothic','Noto Sans JP';
+    font-family: 'Montserrat','Noto Sans JP';
 }
 
 .bg{
@@ -9,7 +9,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: url(../img/top.png);
+    background: url(../img/top.jpg);
     background-size: cover;
     opacity: 0.4;
     z-index: -1;
@@ -17,13 +17,13 @@ body {
 
 h1 {
     color:#8E9057;
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 0.1em; 
 }
 
 h2,p,span,a{
     color:#8E9057;
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 0.2em;
 }
 
@@ -47,6 +47,10 @@ a {
 
 span {
     font-size: 24px;
+}
+
+label{
+    font-weight: 200;
 }
 
 a:hover{
@@ -93,7 +97,7 @@ header {
 }
 
 #menu_bar {
-    background: #fff5ee;
+    background: #fff;
     position: fixed;
     top: 0;
     left: 0;
@@ -282,7 +286,6 @@ button{
     position: absolute;
     background-color: #8E9057;
     width: 0;
-
     left: 50%;
     z-index: 5000;
 }
@@ -291,7 +294,6 @@ button{
     background-color: #8E9057;
     left:8px;
     transform: rotate(-45deg);
-
     z-index: 5000;
 }
 

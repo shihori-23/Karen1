@@ -1,6 +1,6 @@
 body {
     /* 画像ファイルの指定 */
-    background-image: url(../img/top.png);
+    background-image: url(../img/top.jpg);
     /* 画像を常に天地左右の中央に配置 */
     background-position: center center;
     /* 画像をタイル状に繰り返し表示しない */
@@ -19,31 +19,29 @@ body {
 
 h1 {
     color:#8E9057;
-    opacity: 0.8;
-    font-weight: 300;
+    /* opacity: 0.8; */
+    font-weight: 200;
     letter-spacing: 0.1em; 
 }
 
 h2,p,span{
     color:#8E9057;
-    opacity: 0.8;
-    font-weight: 300;
+    /* opacity: 0.8; */
+    font-weight: 200;
     letter-spacing: 0.2em;
 }
 
 h1 {
     font-size:2em;
-    opacity: 0.8;
 }
 
 p {
     font-size:1em;
-    opacity: 0.8;
 }
 
 .nav_li a {
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 0.2em;
     color:#8E9057;
     padding-bottom:0.5em; 

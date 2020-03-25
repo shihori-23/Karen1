@@ -8,11 +8,11 @@
         <title>Karen Suzuki</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&display=swap" rel="stylesheet">        <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Lato:400,700|Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+JP:300,400|Raleway|Sawarabi+Gothic|Spartan&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/contact.css') }}">
         <script src="https://kit.fontawesome.com/0c0068477d.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -25,8 +25,8 @@
                 <ul class="nav">
                     <li class="nav_li"><a href="/">home</a></li>
                     <li class="nav_li"><a href="">about</a></li>
-                    <li class="nav_li"><a href="/personalworks">personal works</a></li>
                     <li class="nav_li"><a href="/works">works</a></li>
+                    <li class="nav_li"><a href="/personalworks">personal works</a></li>
                     <li class="nav_li active"><a class="active" href="/contact">contact</a></li>
                 </ul>
             </div>
@@ -44,8 +44,8 @@
             <ul class="sf_nav">
                 <li class="nav_li"><a href="/">home</a></li>
                 <li class="nav_li"><a href="/about">about</a></li>
-                <li class="nav_li"><a href="/personalworks">personal works</a></li>
                 <li class="nav_li"><a href="/works">works</a></li>
+                <li class="nav_li"><a href="/personalworks">personal works</a></li>
                 <li class="nav_li active"><a class="active" href="/contact">contact</a></li>
             </ul>
             <div class="sf none close_btn" id="closeBtn">
