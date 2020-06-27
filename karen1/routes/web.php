@@ -36,11 +36,22 @@ Route::get('/contacted', function () {
 });
 
 //かれん投稿用
+//パーソナルワーク投稿
 Route::get('/post_personalworks', 'PersonalworksController@index');
 Route::post('/post/personalworks', 'PersonalworksController@store');
 
+//ワーク投稿
 Route::get('/post_works', 'WorksController@index');
 Route::post('/post/works', 'WorksController@store');
+
+//ワーク詳細画像追加
+Route::get('/add/works/{id}', 'WorksController@getData');
+Route::post('/add/works', 'WorksController@postData');
+
+//Works詳細ページでの画像削除
+Route::post('/delete/image/{id}', 'WorksController@deleteDetail');
+//Works詳細ページでの説明文の編集
+Route::post('/edit/detail', 'WorksController@updateData');
 
 
 //　お問い合わせメール送信
