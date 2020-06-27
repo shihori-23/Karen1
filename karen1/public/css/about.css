@@ -1,275 +1,282 @@
 body {
-    /* font-family: 'Lato'; */
-    /* font-family: 'Source Sans Pro' ; */
-    /* font-family: 'Fira Sans' ; */
-    /* font-family: 'Spartan'; */
-    font-family: 'Montserrat','Noto Sans JP';
+  /* font-family: 'Lato'; */
+  /* font-family: 'Source Sans Pro' ; */
+  /* font-family: 'Fira Sans' ; */
+  /* font-family: 'Spartan'; */
+  font-family: "Montserrat", "Noto Sans JP";
 }
 
-.bg{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(../img/top.jpg);
-    background-size: cover;
-    z-index: -1;
-    opacity: 0.6;
-}
-
-h1 {
-    color:#8E9057;
-    font-weight: 200;
-    letter-spacing: 0.1em; 
-}
-
-h2,h3,p,span,a{
-    color:#8E9057;
-    font-weight: 300;
-    letter-spacing: 0.2em;
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/top.jpg);
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.6;
 }
 
 h1 {
-    font-size:1.5em;
-    /* opacity: 0.8; */
+  color: #8f8f8f;
+  font-weight: 200;
+  letter-spacing: 0.1em;
 }
 
-h3{
-    font-size: 1.3em;
+h2,
+h3,
+p,
+span,
+a {
+  color: #8f8f8f;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+}
+
+h1 {
+  font-size: 1.5em;
+  /* opacity: 0.8; */
+}
+
+h3 {
+  font-size: 1.3em;
 }
 
 p {
-    font-size:1em;
-    /* opacity: 0.8; */
-    margin:0;
+  font-size: 1em;
+  /* opacity: 0.8; */
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
-    color:#8E9057;
-    padding-bottom:0.5em; 
-    margin:0 20px;
-    /* opacity: 0.8; */
+  text-decoration: none;
+  color: #8f8f8f;
+  padding-bottom: 0.5em;
+  margin: 0 20px;
+  /* opacity: 0.8; */
+}
+
+.wrap p,
+.wrap h3 {
+  font-weight: 100;
 }
 
 span {
-    font-size: 24px;
+  font-size: 24px;
 }
 
-a:hover{
-    border-bottom: solid 1px #8E9057;
-    /* opacity: 0.8; */
+a:hover {
+  border-bottom: solid 1px #8f8f8f;
+  /* opacity: 0.8; */
 }
 
 header {
-    padding:10px 20px;
-    display: flex;
-    justify-content: space-between;
-    height: 48px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
 }
 
 /* PC用 */
-@media screen and (min-width:780px){
-    .sf {
-        display: none;
-    }
-
+@media screen and (min-width: 780px) {
+  .sf {
+    display: none;
+  }
 }
 
 /* スマホ用 */
-@media screen and (max-width:781px){
-    .pc {
-        display: none;
-    }
-
+@media screen and (max-width: 781px) {
+  .pc {
+    display: none;
+  }
 }
 
 .nav {
-    display: flex;
-    justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.nav_list a{
-    margin:10px;
+.nav_list a {
+  margin: 10px;
 }
 
-.wrap{
-    width: 80%;
+.wrap {
+  width: 80%;
 }
 
-.main_title{
-    margin: 8px 0 40px;
+.main_title {
+  margin: 8px 0 40px;
 }
 
-.sub_txt{
-    margin-bottom:0.5em;
+.sub_txt {
+  margin-bottom: 0.5em;
 }
 
-.nav_li{
-    margin:1em 0;
+.nav_li {
+  margin: 1em 0;
 }
 
-.active{
-    opacity: 0.7;
-    pointer-events:none;
+.active {
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 #menu_bar {
-    background: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 990;
-    text-align: center;
-    display: flex;
-    visibility: hidden;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    font-size: 1em;
-    opacity: 0;
-    transition: opacity .6s ease, visibility .6s ease;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 990;
+  text-align: center;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  font-size: 1em;
+  opacity: 0;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 .open #menu_bar {
-    visibility: visible;
-    opacity: 0.8;
+  visibility: visible;
+  opacity: 0.8;
 }
 
-#menuBtn{
-    margin-top:8px;
+#menuBtn {
+  margin-top: 8px;
 }
 
 #closeBtn {
-    margin-top:30px;
-    z-index: 1000;
+  margin-top: 30px;
+  z-index: 1000;
 }
 
 .sf_nav {
-    margin-top:40px;
+  margin-top: 40px;
 }
 
-.sf_nav li{
-    margin-bottom:24px;
+.sf_nav li {
+  margin-bottom: 24px;
 }
 
-.content2 a:hover,.sf:hover{
-    border:none;
+.content2 a:hover,
+.sf:hover {
+  border: none;
 }
 
-.wrap{
-    width: 90%;
-    margin:0 auto;
+.wrap {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.wrap h2{
-    font-size: 1em;
-    margin:32px 0;
+.wrap h2 {
+  font-size: 1em;
+  margin: 32px 0;
 }
 
-.wrap h3{
-    font-size: 1.3em;
-    margin:32px 0;
+.wrap h3 {
+  font-size: 1.3em;
+  margin: 32px 0;
 }
 
-.wrap p{
-    font-size: 1em;
-    letter-spacing: 0.05em; 
-    margin:16px 0;
+.wrap p {
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  margin: 16px 0;
+  font-family: "Noto Sans JP";
 }
 
-.content2{
-    margin-top:2em;
+.content2 {
+  margin-top: 2em;
 }
 
-.content2 a{
-    margin: 0;
-    cursor: pointer;
+.content2 a {
+  margin: 0;
+  cursor: pointer;
 }
 
-.content2 span{
-    font-size: 1.1em;
-    margin-right: 10px;
-    font-weight: 300;
+.content2 span {
+  font-size: 1.1em;
+  margin-right: 10px;
+  font-weight: 200;
 }
 
 /* ハンバーガーメニューのアイコンCSS */
 .hamburger {
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
-    height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
-    cursor: pointer;
-    z-index: 5000;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+  height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+  cursor: pointer;
+  z-index: 5000;
 }
 
 .hamburger__line {
-    position: absolute;
-    left: 11px;
-    width: 18px;
-    height: 1px;
-    background-color: #8E9057;
-    transition: all .6s;
-    z-index: 5000;
+  position: absolute;
+  left: 11px;
+  width: 18px;
+  height: 1px;
+  background-color: #8f8f8f;
+  transition: all 0.6s;
+  z-index: 5000;
 }
 .hamburger__line--1 {
-    top: 14px;
-    z-index: 5000;
+  top: 14px;
+  z-index: 5000;
 }
 .hamburger__line--2 {
-    top: 20px;
-    z-index: 5000;
+  top: 20px;
+  z-index: 5000;
 }
 .hamburger__line--3 {
-    top: 26px;
-    z-index: 5000;
+  top: 26px;
+  z-index: 5000;
 }
 
 .close_btn {
-    position: relative;
-    cursor: pointer;
-    width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
-    height: 40px;
-    margin:20px auto;
+  position: relative;
+  cursor: pointer;
+  width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+  height: 40px;
+  margin: 20px auto;
 }
 
 .line {
-    background-color: #8E9057;
-    width: 18px;
-    height: 1px;
-    z-index: 5000;
+  background-color: #8f8f8f;
+  width: 18px;
+  height: 1px;
+  z-index: 5000;
 }
 
 .line--1 {
-    position: absolute;
-    transform: rotate(45deg);
-    background-color: #8E9057;
-    left:8px;
-    z-index: 5000;
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: #8f8f8f;
+  left: 8px;
+  z-index: 5000;
 }
 .line--2 {
-    position: absolute;
-    background-color: #8E9057;
-    width: 0;
+  position: absolute;
+  background-color: #8f8f8f;
+  width: 0;
 
-    left: 50%;
-    z-index: 5000;
+  left: 50%;
+  z-index: 5000;
 }
 .line--3 {
-    position: absolute;
-    background-color: #8E9057;
-    left:8px;
-    transform: rotate(-45deg);
+  position: absolute;
+  background-color: #8f8f8f;
+  left: 8px;
+  transform: rotate(-45deg);
 
-    z-index: 5000;
+  z-index: 5000;
 }
 
 /* 表示非表示の切り替え用 */
-.none{
-    display: none;
+.none {
+  display: none;
 }
-    
-

@@ -60,8 +60,14 @@
                 <h2>- personal works</h2>
             </div>
             <div class="content2">
+                @foreach($images as $i)
+                <div class="img_wrap animated hidden" data-animate="fadeIn">
+                        <img src="{{ asset($i->file) }}" alt="personal_work">
+                </div>
+                @endforeach 
                 <!-- <div class="col_4"> -->
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
+                    
+                    <!-- <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img/1.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
@@ -146,12 +152,6 @@
                         <img src="{{ asset('personal_img/29.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/1.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
-                        <img src="{{ asset('personal_img2/2.jpg') }}" alt="personal_work">
-                    </div>
-                    <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img2/3.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
@@ -200,11 +200,17 @@
                         <img src="{{ asset('personal_img2/20.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
+                        <img src="{{ asset('personal_img2/1.jpg') }}" alt="personal_work">
+                    </div>
+                    <div class="img_wrap animated hidden" data-animate="fadeIn">
+                        <img src="{{ asset('personal_img2/2.jpg') }}" alt="personal_work">
+                    </div>
+                    <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img2/21.jpg') }}" alt="personal_work">
                     </div>
                     <div class="img_wrap animated hidden" data-animate="fadeIn">
                         <img src="{{ asset('personal_img2/24.jpg') }}" alt="personal_work">
-                    </div>
+                    </div> -->
             </div>
         </div>
 

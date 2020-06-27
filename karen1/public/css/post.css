@@ -1,18 +1,21 @@
-/* 共通部分 */
 body {
-  font-family: "Montserrat", "Sawarabi Gothic", "Noto Sans JP";
+  /* font-family: 'Lato'; */
+  /* font-family: 'Source Sans Pro' ; */
+  /* font-family: 'Fira Sans' ; */
+  /* font-family: 'Spartan'; */
+  font-family: "Montserrat", "Noto Sans JP";
 }
 
 .bg {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background: url(../img/top.jpg);
   background-size: cover;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 h1 {
@@ -22,6 +25,7 @@ h1 {
 }
 
 h2,
+h3,
 p,
 span,
 a {
@@ -35,9 +39,14 @@ h1 {
   /* opacity: 0.8; */
 }
 
+h3 {
+  font-size: 1.3em;
+}
+
 p {
   font-size: 1em;
   /* opacity: 0.8; */
+  margin: 0;
 }
 
 a {
@@ -46,6 +55,11 @@ a {
   padding-bottom: 0.5em;
   margin: 0 20px;
   /* opacity: 0.8; */
+}
+
+.wrap p,
+.wrap h3 {
+  font-weight: 100;
 }
 
 span {
@@ -62,6 +76,20 @@ header {
   display: flex;
   justify-content: space-between;
   height: 48px;
+}
+
+/* PC用 */
+@media screen and (min-width: 780px) {
+  .sf {
+    display: none;
+  }
+}
+
+/* スマホ用 */
+@media screen and (max-width: 781px) {
+  .pc {
+    display: none;
+  }
 }
 
 .nav {
@@ -91,7 +119,7 @@ header {
 
 .active {
   opacity: 0.7;
-  /* pointer-events:none; */
+  pointer-events: none;
 }
 
 #menu_bar {
@@ -101,7 +129,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 900;
+  z-index: 990;
   text-align: center;
   display: flex;
   visibility: hidden;
@@ -121,8 +149,9 @@ header {
   margin-top: 8px;
 }
 
-.sf_nav_container {
-  z-index: 3000;
+#closeBtn {
+  margin-top: 30px;
+  z-index: 1000;
 }
 
 .sf_nav {
@@ -133,13 +162,6 @@ header {
   margin-bottom: 24px;
 }
 
-/* 表示非表示の切り替え用 */
-.none {
-  display: none;
-}
-
-/* 共通部分 */
-
 .content2 a:hover,
 .sf:hover {
   border: none;
@@ -148,7 +170,6 @@ header {
 .wrap {
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 24px;
 }
 
 .wrap h2 {
@@ -156,45 +177,60 @@ header {
   margin: 32px 0;
 }
 
-/* PC用 */
-@media screen and (min-width: 780px) {
-  .sf {
-    display: none;
-  }
+.wrap h3 {
+  font-size: 1.3em;
+  margin: 32px 0;
 }
 
-/* スマホ用 */
-@media screen and (max-width: 781px) {
-  .pc {
-    display: none;
-  }
+.wrap p {
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  margin: 16px 0;
+  font-family: "Noto Sans JP";
 }
 
-/* 画像欄 */
 .content2 {
+  margin-top: 2em;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 1fr;
   grid-gap: 32px 5vw;
 }
 
-.img_wrap {
+.content2 a {
+  margin: 0;
+  cursor: pointer;
+}
+
+.content2 span {
+  font-size: 1.1em;
+  margin-right: 10px;
+  font-weight: 200;
+}
+
+.form_tilte {
+  width: 70%;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.submit_btn {
+  margin-top: 16px;
+}
+
+.personal_img {
   grid-column: span 3;
   width: 100%;
   height: auto;
-  z-index: 100;
 }
 
-.img_wrap img {
+.personal_image {
+  object-fit: cover;
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
-.hidden {
-  opacity: 0;
-}
-
+/* ハンバーガーメニューのアイコンCSS */
 .hamburger {
   position: absolute;
   right: 8px;
@@ -266,14 +302,13 @@ header {
   z-index: 5000;
 }
 
-@media screen and (min-width: 600px) {
-  .content2 {
-    grid-gap: 32px 3.125vw;
-  }
+/* 表示非表示の切り替え用 */
+.none {
+  display: none;
+}
 
-  .img_wrap {
-    grid-column: span 3;
-    width: 100%;
-    height: auto;
-  }
+.content2 .caption {
+  font-size: 0.8em;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
