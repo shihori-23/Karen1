@@ -19,9 +19,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/personalworks', function () {
-    return view('personal');
-});
+// Route::get('/personalworks', function () {
+//     return view('personal');
+// });
+Route::get('/personalworks', 'PersonalworksController@getData');
 
 Route::get('/works', function () {
     return view('work');
@@ -33,6 +34,14 @@ Route::get('/contact', function () {
 Route::get('/contacted', function () {
     return view('contacted');
 });
+
+//かれん投稿用
+Route::get('/post_personalworks', 'PersonalworksController@index');
+Route::post('/post/personalworks', 'PersonalworksController@store');
+
+Route::get('/post_works', 'WorksController@index');
+Route::post('/post/works', 'WorksController@store');
+
 
 //　お問い合わせメール送信
 // Route::get('/mail', 'MailController@index');

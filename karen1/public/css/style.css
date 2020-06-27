@@ -1,75 +1,76 @@
 body {
-    /* 画像ファイルの指定 */
-    background-image: url(../img/top.jpg);
-    /* 画像を常に天地左右の中央に配置 */
-    background-position: center center;
-    /* 画像をタイル状に繰り返し表示しない */
-    background-repeat: no-repeat;
-    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
-    background-attachment: fixed;
-    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-    background-size: cover;
-    /* 背景画像が読み込まれる前に表示される背景のカラー */
-    background-color: #464646;
-    /* 文字 */
-    color:#8E9057;
-    text-align: center;
-    font-family: 'Montserrat';
+  /* 画像ファイルの指定 */
+  background-image: url(../img/top.jpg);
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #fff;
+  /* 文字 */
+  color: #8f8f8f;
+  text-align: center;
+  font-family: "Montserrat";
 }
 
 h1 {
-    color:#8E9057;
-    /* opacity: 0.8; */
-    font-weight: 200;
-    letter-spacing: 0.1em; 
+  color: #8f8f8f;
+  /* opacity: 0.8; */
+  font-weight: 200;
+  letter-spacing: 0.1em;
 }
 
-h2,p,span{
-    color:#8E9057;
-    /* opacity: 0.8; */
-    font-weight: 200;
-    letter-spacing: 0.2em;
+h2,
+p,
+span {
+  color: #8f8f8f;
+  /* opacity: 0.8; */
+  font-weight: 200;
+  letter-spacing: 0.2em;
 }
 
 h1 {
-    font-size:2em;
+  font-size: 2em;
 }
 
 p {
-    font-size:1em;
+  font-size: 1em;
 }
 
 .nav_li a {
-    text-decoration: none;
-    font-weight: 200;
-    letter-spacing: 0.2em;
-    color:#8E9057;
-    padding-bottom:0.5em; 
-    opacity: 0.8;
+  text-decoration: none;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  color: #8f8f8f;
+  padding-bottom: 0.5em;
+  opacity: 0.8;
 }
 
-.nav_li a:hover{
-    border-bottom: solid 1px #8E9057;
-    opacity: 0.8;
+.nav_li a:hover {
+  border-bottom: solid 1px #8f8f8f;
+  opacity: 0.8;
 }
 
-.wrap{
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
+.wrap {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.main_title{
-    margin: 0 0 2.5em;
+.main_title {
+  margin: 0 0 2.5em;
 }
 
-.sub_txt{
-    margin-bottom:0.5em;
+.sub_txt {
+  margin-bottom: 0.5em;
 }
 
-.nav_li{
-    margin:1.5em 0;
+.nav_li {
+  margin: 1.5em 0;
 }
-
