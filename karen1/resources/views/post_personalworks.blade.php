@@ -45,7 +45,7 @@
 
             @foreach($images as $i)
             <div class="personal_img">
-                <img src="{{$i->file}}" alt="サムネイル" class="personal_image">
+                <img src="{{asset($i->file)}}" alt="サムネイル" class="personal_image">
             </div>
             @endforeach           
             </div>

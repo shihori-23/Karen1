@@ -21,13 +21,11 @@
                 <h1 class="txt">Karen Suzuki</h1>
             </div>
             <div class="wrap">
-            <h2>Worksに新たな画像を追加します<br>※メイン画像のみ投稿してください</h2>
+            <h2>Worksに詳細画像を追加します<br>※複数選択可能です</h2>
             <div class="content1">
-                <form method="POST" action="/post/works" enctype="multipart/form-data" >
+                <form method="POST" action="/add/works" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                    <div>
-                        <input type="text" name="title" placeholder="お仕事の詳細を入力してください" class="form_tilte">
-                    </div>
+                        <input type="hidden" name="id" value="{{$work_id}}">
                         <input type="file" name="photo">
                     <div>
                         <input type="submit" class="submit_btn">
@@ -45,17 +43,39 @@
             </div>
             @endif
 
-            <h2>プレビュー</h2>
+            <h2>プレビュー メイン画像</h2>
             <div class="content2">
-    
-            @foreach($images as $i)
+            @if($images)
                 <div class="personal_img">
-                    <img src="{{asset( $i->file )}}" alt="サムネイル" class="personal_image">
-                    <p class="caption">{{$i->deteil}}</p>
-                    <a href="/add/works/{{$i->id}}">画像を追加する</a>
+                    <img src="{{ asset($images->file) }}" alt="サムネイル" class="personal_image">
+                    <form method="POST" action="/edit/detail" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                        <input type="hidden" name="id" value="{{$work_id}}">
+                        <input type="text" name="detail" value="{{$images->deteil}}" class="form_tilte-2">
+                    <div>
+                        <input type="submit" class="submit_btn" value="説明を変更">
+                    </div>
+                </form>
                 </div>
+            @endif
+            </div>
 
-            @endforeach           
+            <h2>プレビュー 詳細画像</h2>
+            <div class="content2">
+            @if($detail_images)
+                @foreach ($detail_images as $d)
+                <div class="personal_img">
+                    <img src="{{ asset($d->file) }}" alt="サムネイル" class="personal_image">
+                    <form method="POST" action="/delete/image/{{$d->id}}" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div>
+                        <input type="hidden" name="id" value="{{$work_id}}">
+                        <input type="submit" class="submit_btn" value="削除">
+                    </div>
+                </form>
+                </div>
+                @endforeach
+            @endif           
             </div>
         </div>
 
