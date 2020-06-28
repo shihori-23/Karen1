@@ -39,8 +39,7 @@ class PersonalworksController extends Controller
         return redirect('post_personalworks');
     }
 
-    //表示用
-
+    //一覧表示用
     public function getData()
     {   
         $images = Personalwork::orderBy('sort','asc')->get();
@@ -48,6 +47,14 @@ class PersonalworksController extends Controller
         return view('personal',[
             'images' => $images,
         ]);
+    }
+
+    //削除
+    public function delete($id)
+    {   
+        Personalwork::find($id)->delete();
+
+        return redirect('post_personalworks');
     }
 
 

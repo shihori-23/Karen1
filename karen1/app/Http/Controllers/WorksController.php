@@ -69,6 +69,7 @@ class WorksController extends Controller
 
         return redirect()->action('WorksController@getData',['id' => $workId]);
     }
+    
     // Works　詳細ページ　説明文の更新
     public function updateData(Request $request)
     {

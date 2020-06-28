@@ -46,6 +46,12 @@
             @foreach($images as $i)
             <div class="personal_img">
                 <img src="{{asset($i->file)}}" alt="サムネイル" class="personal_image">
+                <form method="POST" action="/delete/personal_image/{{$i->id}}" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                        <div>
+                            <input type="submit" class="submit_btn" value="削除">
+                        </div>
+                </form>
             </div>
             @endforeach           
             </div>

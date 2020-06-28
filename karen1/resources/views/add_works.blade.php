@@ -68,11 +68,11 @@
                     <img src="{{ asset($d->file) }}" alt="サムネイル" class="personal_image">
                     <form method="POST" action="/delete/image/{{$d->id}}" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                    <div>
-                        <input type="hidden" name="id" value="{{$work_id}}">
-                        <input type="submit" class="submit_btn" value="削除">
-                    </div>
-                </form>
+                        <div>
+                            <input type="hidden" name="id" value="{{$work_id}}">
+                            <input type="submit" class="submit_btn" value="削除">
+                        </div>
+                    </form>
                 </div>
                 @endforeach
             @endif           
