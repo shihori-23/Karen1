@@ -40,6 +40,8 @@ Route::get('/contacted', function () {
 Route::get('/post_personalworks', 'PersonalworksController@index');
 Route::post('/post/personalworks', 'PersonalworksController@store');
 
+Route::post('/delete/personal_image/{id}', 'PersonalworksController@delete');
+
 //ワーク投稿
 Route::get('/post_works', 'WorksController@index');
 Route::post('/post/works', 'WorksController@store');

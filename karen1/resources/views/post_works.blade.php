@@ -52,9 +52,8 @@
                 <div class="personal_img">
                     <img src="{{asset( $i->file )}}" alt="サムネイル" class="personal_image">
                     <p class="caption">{{$i->deteil}}</p>
-                    <a href="/add/works/{{$i->id}}">画像を追加する</a>
+                    <a href="/add/works/{{$i->id}}"><button>編集・画像を追加する</button></a>
                 </div>
-
             @endforeach           
             </div>
         </div>
