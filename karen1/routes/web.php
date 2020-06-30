@@ -24,9 +24,10 @@ Route::get('/about', function () {
 // });
 Route::get('/personalworks', 'PersonalworksController@getData');
 
-Route::get('/works', function () {
-    return view('work');
-});
+Route::get('/works', 'WorksController@getAllWorksData');
+
+Route::get('/detail/personalworks/{id}', 'PersonalworksController@getDetailData');
+Route::get('/detail/works/{id}', 'WorksController@getDetailData');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -45,6 +46,9 @@ Route::post('/delete/personal_image/{id}', 'PersonalworksController@delete');
 //ワーク投稿
 Route::get('/post_works', 'WorksController@index');
 Route::post('/post/works', 'WorksController@store');
+
+//Works 削除
+Route::post('/delete/works/{id}', 'WorksController@delete');
 
 //ワーク詳細画像追加
 Route::get('/add/works/{id}', 'WorksController@getData');

@@ -1,5 +1,6 @@
 /* 共通部分 */
 body {
+  /* font-family: "Montserrat", "Noto Sans JP"; */
   font-family: "Montserrat", "Sawarabi Gothic", "Noto Sans JP";
 }
 
@@ -79,6 +80,7 @@ header {
 
 .main_title {
   margin: 8px 0 40px;
+  z-index: 3000;
 }
 
 .sub_txt {
@@ -157,14 +159,14 @@ header {
 }
 
 /* PC用 */
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 781px) {
   .sf {
     display: none;
   }
 }
 
 /* スマホ用 */
-@media screen and (max-width: 781px) {
+@media screen and (max-width: 780px) {
   .pc {
     display: none;
   }
@@ -175,7 +177,7 @@ header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 1fr;
-  grid-gap: 32px 5vw;
+  grid-gap: 32px 3vw;
 }
 
 .img_wrap {
@@ -193,6 +195,27 @@ header {
 
 .hidden {
   opacity: 0;
+}
+
+/* Works一覧 */
+.content2-1 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-gap: 32px 2.5vw;
+}
+
+.img_wrap2-1 {
+  grid-column: span 3;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+}
+
+.img_wrap2-1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .hamburger {
@@ -265,8 +288,144 @@ header {
 
   z-index: 5000;
 }
+/* カルーセル */
+.swiper-container {
+  width: 65%;
+  margin: 0 auto;
+  height: 90%;
+}
 
-@media screen and (min-width: 600px) {
+.swiper-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* .swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.4;
+} */
+
+.nav_all_works {
+  margin: 24px 0;
+}
+
+.nav_all_works a {
+  font-family: "Montserrat", "Noto Sans JP";
+  font-weight: 100;
+  letter-spacing: 0.3em;
+  margin-left: 0;
+  font-size: 0.9em;
+}
+
+.work_all_link {
+  margin: 0;
+  cursor: pointer;
+}
+
+.work_all_link:hover {
+  border-bottom: none;
+  opacity: 0.7;
+}
+
+.work_all_title {
+  /* font-family: "Montserrat", "Noto Sans JP"; */
+  font-family: "Noto Sans JP";
+  margin-top: 8px;
+  font-weight: 100;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+
+/* Works詳細ページ */
+.work_detail_container {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.work_title {
+  font-family: "Noto Sans JP";
+  /* margin-top: 1em; */
+  font-size: 1em;
+  text-align: left;
+  font-weight: 100;
+  letter-spacing: 0.04em;
+}
+
+.center {
+  text-align: center;
+}
+
+.image-slide {
+  margin: 16px auto 24px;
+}
+
+.nav_all_works.center {
+  margin: 0 auto;
+}
+
+/* モーダルスライダー */
+.modal {
+  /* display: none; */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  opacity: 1;
+}
+
+.modal_container {
+  height: 80%;
+  position: fixed;
+  top: 8vh;
+  left: 25%;
+  right: 25%;
+  width: 50%;
+  z-index: 6000;
+  padding: 3em 1em 1em;
+  background-color: #fff;
+  /* transform: translate(-50%, -50%); */
+}
+
+.swiper-slide.img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide.img .swiper-img {
+  width: 100%;
+  height: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.close_modal {
+  margin-top: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.close_modal span {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.modal__bg {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: 5000;
+}
+
+.modal.display-none {
+  opacity: 0;
+  z-index: -2;
+}
+
+@media screen and (max-width: 780px) {
   .content2 {
     grid-gap: 32px 3.125vw;
   }
@@ -275,5 +434,55 @@ header {
     grid-column: span 3;
     width: 100%;
     height: auto;
+  }
+
+  .content2-1 {
+    grid-gap: 24px 4.125vw;
+  }
+
+  .img_wrap2-1 {
+    grid-column: span 6;
+    width: 100%;
+    height: auto;
+  }
+
+  .work_detail_container {
+    width: 50%;
+  }
+
+  .work_title {
+    font-size: 0.8em;
+  }
+
+  .work_all_title {
+    font-size: 0.8em;
+  }
+
+  .work_detail_container {
+    width: 80%;
+  }
+
+  .modal_container {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-top: 4em;
+    padding-right: 0;
+    padding-left: 0;
+    z-index: 9000;
+  }
+
+  .swiper-container {
+    width: 80%;
+    height: auto;
+    max-height: 500px;
+    margin: 0 auto;
+  }
+
+  .display-fixed {
+    position: fixed;
   }
 }

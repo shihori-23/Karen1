@@ -18,7 +18,7 @@
     <body>
         <div class="bg"></div>
             <div class="main_title">
-                <h1 class="txt">Karen Suzuki</h1>
+                <a href="/"><h1 class="txt">Karen Suzuki</h1></a>
             </div>
             <div class="wrap">
             <h2>Worksに新たな画像を追加します<br>※メイン画像のみ投稿してください</h2>
@@ -52,7 +52,11 @@
                 <div class="personal_img">
                     <img src="{{asset( $i->file )}}" alt="サムネイル" class="personal_image">
                     <p class="caption">{{$i->deteil}}</p>
-                    <a href="/add/works/{{$i->id}}"><button>編集・画像を追加する</button></a>
+                    <a href="/add/works/{{$i->id}}"><button>編集</button></a>
+                    <form method="POST" action="/delete/works/{{$i->id}}" enctype="multipart/form-data" >
+                    {{ csrf_field() }}
+                        <input type="submit" class="submit_btn" value="削除">
+                </form>
                 </div>
             @endforeach           
             </div>

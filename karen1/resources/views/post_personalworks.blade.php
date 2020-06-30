@@ -18,7 +18,7 @@
     <body>
         <div class="bg"></div>
             <div class="main_title">
-                <h1 class="txt">Karen Suzuki</h1>
+                <a href="/"><h1 class="txt">Karen Suzuki</h1></a>
             </div> 
         <div class="wrap">
             <h2>PersonalWorksに新たな画像を追加します</h2>

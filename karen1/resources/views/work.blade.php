@@ -8,8 +8,12 @@
         <title>Karen Suzuki</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&display=swap" rel="stylesheet">        <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Lato:400,700|Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Lato:400,700|Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+JP:300,400|Raleway|Sawarabi+Gothic|Spartan&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap" rel="stylesheet">        
+
         <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
         <link rel="stylesheet" href="{{ asset('css/personal.css') }}">
         <script src="https://kit.fontawesome.com/0c0068477d.js" crossorigin="anonymous"></script>
@@ -58,37 +62,17 @@
             <div class="content1">
                 <h2>- works</h2>
             </div>
-            <div class="content2">
+            <div class="content2-1">
                 <!-- <div class="col_4"> -->
-                    <div class="img_wrap">
-                        <img src="" alt="">
-                    </div>
-                    <div class="img_wrap">
-                        <img src="" alt="">
-                    </div>
-                    <div class="img_wrap">
-                        <img src="" alt="">
-                    </div>
-                    <div class="img_wrap">
-                        <img src="" alt="">
-                    </div>
-                    <div class="img_wrap">
-                        <img src="" alt="">
-                    </div>
-                    <div class="img_wrap">
-                        <img src="" alt="">
-                    </div>
-                    <div class="img_wrap">
-                        <img src="" alt="">
-                    </div>
-                    <div class="img_wrap">
-                        <img src="" alt="">
-                    </div>
-                    <div class="img_wrap">
-                        <img src="" alt="">
-                    </div>
-                    
-                <!-- </div> -->
+                @foreach($images as $i)
+                <div class="img_wrap2-1 animated hidden" data-animate="fadeIn">
+                    <a href="/detail/works/{{$i->id}}" class="work_all_link">
+                        <img src="{{ asset($i->file) }}" alt="personal_work">
+                        <p class="work_all_title">{{$i->deteil}}</p>
+                    </a>
+
+                </div>
+                @endforeach 
             </div>
         </div>
 

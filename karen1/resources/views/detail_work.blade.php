@@ -9,16 +9,19 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&display=swap" rel="stylesheet">        <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600|Lato:400,700|Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+JP:300,400|Raleway|Sawarabi+Gothic|Spartan&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap" rel="stylesheet">        
         <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}">
+        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css"> -->
+        <!-- <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}"> -->
         <link rel="stylesheet" href="{{ asset('css/personal.css') }}">
         <script src="https://kit.fontawesome.com/0c0068477d.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-
+        <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
     </head>
     <body>
+
         <div class="bg"></div>
         <header class="header_conatainer">
             <div class="main_title">
@@ -27,9 +30,8 @@
             <div class="nav_container pc">
                 <ul class="nav">
                     <li class="nav_li"><a href="/">home</a></li>
-                    <li class="nav_li"><a href="/about">about</a></li>
-                    <li class="nav_li"><a href="/works">works</a></li>
-                    <li class="nav_li active"><a class="active" href="/personalworks">personal works</a></li>
+                    <li class="nav_li active"><a  class="active" href="/works">works</a></li>
+                    <li class="nav_li"><a href="/personalworks">personal works</a></li>
                     <li class="nav_li"><a href="/contact">contact</a></li>
                 </ul>
             </div>
@@ -43,12 +45,12 @@
         </div>
         </header>
         <!-- スマホ用のメニュー -->
-        <div class="sf_nav_container sf" id="menu_bar">
+        <div class="sf_nav_container　sf" id="menu_bar">
             <ul class="sf_nav">
                 <li class="nav_li"><a href="/">home</a></li>
                 <li class="nav_li"><a href="/about">about</a></li>
-                <li class="nav_li"><a href="works">works</a></li>
-                <li class="nav_li active"><a href="/personalworks">personal works</a></li>
+                <li class="nav_li active"><a href="works">works</a></li>
+                <li class="nav_li"><a href="/personalworks">personal works</a></li>
                 <li class="nav_li"><a href="contact">contact</a></li>
             </ul>
             <div class="sf none close_btn" id="closeBtn">
@@ -59,72 +61,35 @@
         </div>  
         <div class="wrap">
             <div class="content1">
-                <h2>- personal works</h2>
+                <h2>- works</h2>
+                <!-- <h2 class="work_title">- {{ $mainImage->deteil }}</h2> -->
             </div>
-            <div class="content2">
-                @foreach($images as $i)
-                <div class="img_wrap animated hidden js-modal-open work_all_link" data-animate="fadeIn" data-index="{{$i->id}}">
-                <!-- <div class="img_wrap animated hidden" data-animate="fadeIn"> -->
-                    <img src="{{ asset($i->file) }}" alt="personal_work" class="work_all_link">
+            <div class="work_detail_container">
+                <p class="work_title center">{{ $mainImage->deteil }}</p>
+                <div class="image-wrapper">
+                    <div class="image-slide animated hidden" data-animate="fadeIn"><img src="{{asset($mainImage->file)}}" alt="personalworks詳細メイン画像" class="swiper-img"></div>
+                    <!-- <h2 class="work_title center">{{ $mainImage->deteil }}</h2> -->
+                    @foreach($images as $i)
+                    <div class="image-slide animated hidden" data-animate="fadeIn"><img src="{{asset($i->file)}}" alt="personalworks詳細画像" class="swiper-img"></div>
+                    @endforeach
                 </div>
-                @endforeach 
+                <!-- <div class="swiper-pagination"></div> -->
+                <!-- <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div> -->
             </div>
-        </div>
 
-        <div class="modal js-modal display-none">
-            <div class="modal_container">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        @foreach($images as $i)
-                        <div class="swiper-slide img"><img src="{{asset($i->file)}}" alt="personalworks詳細画像" class="swiper-img"></div>
-                        @endforeach
-                    </div>
-                    <!-- <div class="swiper-pagination"></div> -->
-                    <div class="swiper-button-prev swiper-button-white"></div>
-                    <div class="swiper-button-next swiper-button-white"></div>
-                </div>
-                <div class="close_modal js-modal-close">
-                    <span>×</span>
-                </div>
+            <div class="nav_all_works center">
+                <a href="/works">一覧に戻る</a>
             </div>
-            <div class="modal__bg js-modal-close"></div>
-        </div>
 
+        </div>
 
     <script src="{{ asset('js/jquery-2.1.3.min.js') }}"></script>
     <script>
-    var clickImgId = 1;
-
-    //　モーダルの表示非表示
-    $('.js-modal-open').on('click',function(){
-        $('.js-modal').toggleClass("display-none");
-        $('.header_conatainer').toggleClass("display-fixed");
-
-        clickImgId = $(this).data('index') - 1;
-
-        var mySwiper = new Swiper ('.swiper-container', {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 32,
-        centeredSlides: true,
-        initialSlide: clickImgId,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        }
-    })
-        });
-
-        $('.js-modal-close').on('click',function(){
-            $('.js-modal').toggleClass("display-none");
-            $('.header_conatainer').toggleClass("display-fixed");
-        });
 
         //　ハンバーガーメニュー表示
         $("#menuBtn").on('click',function(){
+            console.log("クリックしたよ");
             $('body').toggleClass('open');
             $('#menuBtn').toggleClass('none');
             $('#closeBtn').toggleClass('none');

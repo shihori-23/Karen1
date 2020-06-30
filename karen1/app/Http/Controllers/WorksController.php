@@ -9,7 +9,18 @@ use App\WorkImage;
 
 class WorksController extends Controller
 {
-    //
+    // 【表示画面】Work 一覧表示
+    public function getAllWorksData()
+    {   
+        $images = Work::orderBy('created_at','asc')->get();
+
+        return view('work',[
+            'images' => $images,
+        ]);
+    }
+    
+    //　【管理画面】
+    // Work 投稿画面でのプレビュー表示様
     public function index()
     {   
         $images = Work::orderBy('created_at','asc')->get();
@@ -19,6 +30,7 @@ class WorksController extends Controller
         ]);
     }
 
+    //Work 投稿
     public function store(ImageRequest $request)
     {
         $posts = new Work;
@@ -61,6 +73,15 @@ class WorksController extends Controller
 
         return redirect()->action('WorksController@getData',['id' => $id]);
     }
+    // Works　一覧ページ削除
+    public function delete($id)
+    {   
+        Work::where('id','=',$id)->delete();
+        WorkImage::where('work_id','=',$id)->delete();
+
+        return redirect('post_works');
+    }
+
     // Works　詳細ページ　画像の削除
     public function deleteDetail($id)
     {   
@@ -69,7 +90,7 @@ class WorksController extends Controller
 
         return redirect()->action('WorksController@getData',['id' => $workId]);
     }
-    
+
     // Works　詳細ページ　説明文の更新
     public function updateData(Request $request)
     {
@@ -79,5 +100,18 @@ class WorksController extends Controller
         $item->save();
 
         return redirect()->action('WorksController@getData',['id' => $id]);
+    }
+
+    // 【表示画面】
+    //詳細ページ　スライダー表示用
+    public function getDetailData($id)
+    {   
+        $mainImage = Work::where('id','=',$id)->first();
+        $images = WorkImage::where('work_id','=',$id)->orderBy('id','asc')->get();
+
+        return view('detail_work',[
+            'images' => $images,
+            'mainImage' => $mainImage,
+        ]);
     }
 }

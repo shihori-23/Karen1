@@ -21,7 +21,7 @@
                 <h1 class="txt">Karen Suzuki</h1>
             </div>
             <div class="wrap">
-            <h2>Worksに詳細画像を追加します<br>※複数選択可能です</h2>
+            <h2>Worksに詳細画像を追加します<br>※画像は１枚ずつ投稿してください</h2>
             <div class="content1">
                 <form method="POST" action="/add/works" enctype="multipart/form-data">
                     {{ csrf_field() }}

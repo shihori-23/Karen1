@@ -57,5 +57,15 @@ class PersonalworksController extends Controller
         return redirect('post_personalworks');
     }
 
+    //詳細ページ　スライダー表示用
+    public function getDetailData()
+    {   
+        $images = Personalwork::orderBy('sort','asc')->get();
+
+        return view('detail_personal',[
+            'images' => $images,
+        ]);
+    }
+
 
 }
