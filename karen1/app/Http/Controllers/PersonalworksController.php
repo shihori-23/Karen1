@@ -67,5 +67,61 @@ class PersonalworksController extends Controller
         ]);
     }
 
+    //【管理画面】並び替え 前へ
+    public function prevData($id)
+    {   
+        $pushData = Personalwork::where('id','=',$id)->first();
+        $sort = $pushData->sort;
+        $allData = Personalwork::where('sort','<=',$sort)->orderBy('sort','desc')->get();
+
+        //　並び替える元のデータ
+        $nowData = $allData[0];
+        $nowId = $nowData->id;
+        $nowSort = $nowData->sort;
+
+        //　１つ前のデータ
+        $prevData = $allData[1];
+        $prevId = $prevData->id;
+        $prevSort = $prevData->sort;
+
+        $nowDataSave = Personalwork::where('id','=',$nowId)->first();
+        $nowDataSave->sort = $prevSort;
+        $nowDataSave->save();
+
+        $prevDataSave = Personalwork::where('id','=',$prevId)->first();
+        $prevDataSave->sort = $nowSort;
+        $prevDataSave->save();
+
+        return redirect('post_personalworks');
+    }
+
+    //【管理画面】並び替え　次へ
+    public function nextData($id)
+    {   
+        $pushData = Personalwork::where('id','=',$id)->first();
+        $sort = $pushData->sort;
+        $allData = Personalwork::where('sort','>=',$sort)->orderBy('sort','asc')->get();
+
+        //　並び替える元のデータ
+        $nowData = $allData[0];
+        $nowId = $nowData->id;
+        $nowSort = $nowData->sort;
+
+        //　１つ前のデータ
+        $nextData = $allData[1];
+        $nextId = $nextData->id;
+        $nextSort = $nextData->sort;
+
+        $nowDataSave = Personalwork::where('id','=',$nowId)->first();
+        $nowDataSave->sort = $nextSort;
+        $nowDataSave->save();
+
+        $nextDataSave = Personalwork::where('id','=',$nextId)->first();
+        $nextDataSave->sort = $nowSort;
+        $nextDataSave->save();
+
+        return redirect('post_personalworks');
+    }
+
 
 }

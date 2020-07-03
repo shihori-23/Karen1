@@ -52,6 +52,18 @@
                             <input type="submit" class="submit_btn" value="削除">
                         </div>
                 </form>
+                <form method="POST" action="/prev/personal_image/{{$i->id}}" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                        <div>
+                            <input type="submit" class="submit_btn" value="前へ">
+                        </div>
+                </form>
+                <form method="POST" action="/next/personal_image/{{$i->id}}" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                        <div>
+                            <input type="submit" class="submit_btn" value="次へ">
+                        </div>
+                </form>
             </div>
             @endforeach           
             </div>

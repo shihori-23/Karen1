@@ -304,7 +304,7 @@ button {
 }
 
 /* PC用 */
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
   .sf {
     display: none;
   }
@@ -315,7 +315,7 @@ button {
 }
 
 /* スマホ用 */
-@media screen and (max-width: 781px) {
+@media screen and (max-width: 767px) {
   .pc {
     display: none;
   }
