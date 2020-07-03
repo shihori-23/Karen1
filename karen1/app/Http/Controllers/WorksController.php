@@ -108,10 +108,51 @@ class WorksController extends Controller
     {   
         $mainImage = Work::where('id','=',$id)->first();
         $images = WorkImage::where('work_id','=',$id)->orderBy('id','asc')->get();
+        $minId =  Work::orderBy('id','asc')->take(1)->get();
+        $maxId =  Work::orderBy('id','desc')->take(1)->get();
 
         return view('detail_work',[
             'images' => $images,
             'mainImage' => $mainImage,
+            'minId' => $minId,
+            'maxId' => $maxId,
+        ]);
+    }
+
+    //詳細ページ 前のページに戻る
+    public function getPrevDetailData($id)
+    {   
+        $allData = Work::where('id','<=',$id)->orderBy('id','desc')->get();
+        $mainImage = $allData[1];
+        $prevId = $mainImage->id;
+
+        $images = WorkImage::where('work_id','=',$prevId)->orderBy('id','asc')->get();
+        $minId =  Work::orderBy('id','asc')->take(1)->get();
+        $maxId =  Work::orderBy('id','desc')->take(1)->get();
+
+        return view('detail_work',[
+            'images' => $images,
+            'mainImage' => $mainImage,
+            'minId' => $minId,
+            'maxId' => $maxId,
+        ]);
+    }
+    //詳細ページ　次のページに戻る
+    public function getNextDetailData($id)
+    {   
+        $allData = Work::where('id','>=',$id)->orderBy('id','asc')->get();
+        $mainImage = $allData[1];
+        $nextId = $mainImage->id;
+
+        $images = WorkImage::where('work_id','=',$nextId)->orderBy('id','asc')->get();
+        $minId =  Work::orderBy('id','asc')->take(1)->get();
+        $maxId =  Work::orderBy('id','desc')->take(1)->get();
+
+        return view('detail_work',[
+            'images' => $images,
+            'mainImage' => $mainImage,
+            'minId' => $minId,
+            'maxId' => $maxId,
         ]);
     }
 }

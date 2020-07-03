@@ -78,10 +78,31 @@
                 <div class="swiper-button-next swiper-button-white"></div> -->
             </div>
 
-            <div class="nav_all_works center">
-                <a href="/works">一覧に戻る</a>
-            </div>
+            <div class="nav_works">
+                @if(($mainImage->id) > ($minId[0]->id))
+                <div class="nav_all_works left">
+                    <a href="/detail/prev/{{ $mainImage->id}}">prev</a>
+                </div>
+                @else
+                <div class="nav_all_works left none_link">
+                    <a href="">prev</a>
+                </div>
+                @endif
 
+                <div class="nav_all_works center">
+                    <a href="/works">一覧に戻る</a>
+                </div>
+
+                @if(($mainImage->id)  < ($maxId[0]->id))
+                <div class="nav_all_works right">
+                    <a href="/detail/next/{{ $mainImage->id}}">next</a>
+                </div>
+                @else
+                <div class="nav_all_works right none_link">
+                    <a href="">next</a>
+                </div>
+                @endif
+            </div>
         </div>
 
     <script src="{{ asset('js/jquery-2.1.3.min.js') }}"></script>

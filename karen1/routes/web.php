@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,7 +28,13 @@ Route::get('/personalworks', 'PersonalworksController@getData');
 Route::get('/works', 'WorksController@getAllWorksData');
 
 Route::get('/detail/personalworks/{id}', 'PersonalworksController@getDetailData');
+// Work詳細ページ表示
 Route::get('/detail/works/{id}', 'WorksController@getDetailData');
+
+//　Work詳細ページ　前へ
+Route::get('/detail/prev/{id}', 'WorksController@getPrevDetailData');
+//　Work詳細ページ　次へ
+Route::get('/detail/next/{id}', 'WorksController@getNextDetailData');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -42,6 +49,9 @@ Route::get('/post_personalworks', 'PersonalworksController@index');
 Route::post('/post/personalworks', 'PersonalworksController@store');
 
 Route::post('/delete/personal_image/{id}', 'PersonalworksController@delete');
+// 並び替え
+Route::post('/prev/personal_image/{id}', 'PersonalworksController@prevData');
+Route::post('/next/personal_image/{id}', 'PersonalworksController@nextData');
 
 //ワーク投稿
 Route::get('/post_works', 'WorksController@index');
