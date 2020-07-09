@@ -12,7 +12,7 @@ class WorksController extends Controller
     // 【表示画面】Work 一覧表示
     public function getAllWorksData()
     {   
-        $images = Work::orderBy('created_at','asc')->get();
+        $images = Work::orderBy('created_at','desc')->get();
 
         return view('work',[
             'images' => $images,
@@ -23,7 +23,7 @@ class WorksController extends Controller
     // Work 投稿画面でのプレビュー表示様
     public function index()
     {   
-        $images = Work::orderBy('created_at','asc')->get();
+        $images = Work::orderBy('created_at','desc')->get();
 
         return view('post_works',[
             'images' => $images,
@@ -52,7 +52,7 @@ class WorksController extends Controller
     {   
         $images = Work::where('id','=',$id)->first();
 
-        $detailImages = WorkImage::where('work_id','=',$id)->orderBy('id','asc')->get();
+        $detailImages = WorkImage::where('work_id','=',$id)->orderBy('created_at','asc')->get();
 
         return view('add_works',[
             'images' => $images,
@@ -107,7 +107,7 @@ class WorksController extends Controller
     public function getDetailData($id)
     {   
         $mainImage = Work::where('id','=',$id)->first();
-        $images = WorkImage::where('work_id','=',$id)->orderBy('id','asc')->get();
+        $images = WorkImage::where('work_id','=',$id)->orderBy('created_at','asc')->get();
         $minId =  Work::orderBy('id','asc')->take(1)->get();
         $maxId =  Work::orderBy('id','desc')->take(1)->get();
 
@@ -122,11 +122,11 @@ class WorksController extends Controller
     //詳細ページ 前のページに戻る
     public function getPrevDetailData($id)
     {   
-        $allData = Work::where('id','<=',$id)->orderBy('id','desc')->get();
+        $allData = Work::where('id','>=',$id)->orderBy('id','asc')->get();
         $mainImage = $allData[1];
         $prevId = $mainImage->id;
 
-        $images = WorkImage::where('work_id','=',$prevId)->orderBy('id','asc')->get();
+        $images = WorkImage::where('work_id','=',$prevId)->orderBy('created_at','asc')->get();
         $minId =  Work::orderBy('id','asc')->take(1)->get();
         $maxId =  Work::orderBy('id','desc')->take(1)->get();
 
@@ -140,11 +140,11 @@ class WorksController extends Controller
     //詳細ページ　次のページに戻る
     public function getNextDetailData($id)
     {   
-        $allData = Work::where('id','>=',$id)->orderBy('id','asc')->get();
+        $allData = Work::where('id','<=',$id)->orderBy('id','desc')->get();
         $mainImage = $allData[1];
         $nextId = $mainImage->id;
 
-        $images = WorkImage::where('work_id','=',$nextId)->orderBy('id','asc')->get();
+        $images = WorkImage::where('work_id','=',$nextId)->orderBy('created_at','asc')->get();
         $minId =  Work::orderBy('id','asc')->take(1)->get();
         $maxId =  Work::orderBy('id','desc')->take(1)->get();
 
