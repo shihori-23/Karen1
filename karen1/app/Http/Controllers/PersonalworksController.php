@@ -11,7 +11,7 @@ class PersonalworksController extends Controller
     //投稿画面でのプレビュー用
     public function index()
     {   
-        $images = Personalwork::orderBy('sort','asc')->get();
+        $images = Personalwork::orderBy('sort','desc')->get();
 
         return view('post_personalworks',[
             'images' => $images,
@@ -21,8 +21,9 @@ class PersonalworksController extends Controller
     public function store(ImageRequest $request)
     {
         $posts = new Personalwork;
-        $id = Personalwork::count();
-        $sort_id= ($id + 1) *10;
+        $countId = Personalwork::orderBy('id','desc')->take(1)->get();
+        $id = $countId[0]->id;
+        $sort_id = ($id + 1) *10;
         $timeStamp = time();
         $fileName = $timeStamp.'.jpg';
         $file = "personal_img/".$fileName;
@@ -30,11 +31,15 @@ class PersonalworksController extends Controller
         $posts->file = $request->photo->store('public/personal_img');
         //保存される名前を決める
         $posts->file = str_replace('public/', 'storage/', $posts->file);
-
-        $posts->sort = $sort_id;
+        $posts->sort = $sort_id * 10;
         $posts->save();
 
-        $images = Personalwork::orderBy('sort','asc')->get();
+        $newPostId = $posts->id;
+        $newPost = Personalwork::find($newPostId);
+        $newPost->sort = $newPostId * 10;
+        $newPost->save();
+
+        $images = Personalwork::orderBy('sort','desc')->get();
 
         return redirect('post_personalworks');
     }
@@ -42,7 +47,7 @@ class PersonalworksController extends Controller
     //一覧表示用
     public function getData()
     {   
-        $images = Personalwork::orderBy('sort','asc')->get();
+        $images = Personalwork::orderBy('sort','desc')->get();
 
         return view('personal',[
             'images' => $images,
@@ -60,7 +65,7 @@ class PersonalworksController extends Controller
     //詳細ページ　スライダー表示用
     public function getDetailData()
     {   
-        $images = Personalwork::orderBy('sort','asc')->get();
+        $images = Personalwork::orderBy('sort','desc')->get();
 
         return view('detail_personal',[
             'images' => $images,
@@ -72,7 +77,7 @@ class PersonalworksController extends Controller
     {   
         $pushData = Personalwork::where('id','=',$id)->first();
         $sort = $pushData->sort;
-        $allData = Personalwork::where('sort','<=',$sort)->orderBy('sort','desc')->get();
+        $allData = Personalwork::where('sort','>=',$sort)->orderBy('sort','asc')->get();
 
         //　並び替える元のデータ
         $nowData = $allData[0];
@@ -100,7 +105,7 @@ class PersonalworksController extends Controller
     {   
         $pushData = Personalwork::where('id','=',$id)->first();
         $sort = $pushData->sort;
-        $allData = Personalwork::where('sort','>=',$sort)->orderBy('sort','asc')->get();
+        $allData = Personalwork::where('sort','<=',$sort)->orderBy('sort','desc')->get();
 
         //　並び替える元のデータ
         $nowData = $allData[0];

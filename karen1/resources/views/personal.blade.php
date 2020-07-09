@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/personal.css') }}">
         <script src="https://kit.fontawesome.com/0c0068477d.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script src="{{ asset('js/swiper.min.js') }}"></script>
 
     </head>
     <body>
@@ -62,8 +62,8 @@
                 <h2>- personal works</h2>
             </div>
             <div class="content2">
-                @foreach($images as $i)
-                <div class="img_wrap animated hidden js-modal-open work_all_link" data-animate="fadeIn" data-index="{{$i->id}}">
+                @foreach($images as $key => $i)
+                <div class="img_wrap animated hidden js-modal-open work_all_link" data-animate="fadeIn" data-index="{{$key}}">
                 <!-- <div class="img_wrap animated hidden" data-animate="fadeIn"> -->
                     <img src="{{ asset($i->file) }}" alt="personal_work" class="work_all_link">
                 </div>
@@ -80,9 +80,9 @@
                         @endforeach
                     </div>
                     <!-- <div class="swiper-pagination"></div> -->
-                    <div class="swiper-button-prev swiper-button-white"></div>
-                    <div class="swiper-button-next swiper-button-white"></div>
                 </div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
                 <div class="close_modal js-modal-close">
                     <span>×</span>
                 </div>
@@ -100,8 +100,7 @@
         $('.js-modal').toggleClass("display-none");
         $('.header_conatainer').toggleClass("display-fixed");
 
-        clickImgId = $(this).data('index') - 1;
-
+        var clickImgId = $(this).data('index');
         var mySwiper = new Swiper ('.swiper-container', {
         loop: true,
         slidesPerView: 1,

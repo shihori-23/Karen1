@@ -79,7 +79,7 @@
             </div>
 
             <div class="nav_works">
-                @if(($mainImage->id) > ($minId[0]->id))
+                @if(($mainImage->id) < ($maxId[0]->id))
                 <div class="nav_all_works left">
                     <a href="/detail/prev/{{ $mainImage->id}}">prev</a>
                 </div>
@@ -93,7 +93,7 @@
                     <a href="/works">一覧に戻る</a>
                 </div>
 
-                @if(($mainImage->id)  < ($maxId[0]->id))
+                @if(($mainImage->id)  > ($minId[0]->id))
                 <div class="nav_all_works right">
                     <a href="/detail/next/{{ $mainImage->id}}">next</a>
                 </div>

@@ -20,6 +20,9 @@
             <div class="main_title">
                 <a href="/"><h1 class="txt">Karen Suzuki</h1></a>
             </div>
+            <div class="menu_bar">
+            <a href="/post_personalworks">personalworksを投稿する</a>
+            </div> 
             <div class="wrap">
             <h2>Worksに新たな画像を追加します<br>※メイン画像のみ投稿してください</h2>
             <div class="content1">
