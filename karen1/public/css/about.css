@@ -78,6 +78,21 @@ header {
   height: 48px;
 }
 
+/* テーブルのスタイル */
+td {
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  font-weight: 100;
+  margin: 16px 0;
+  font-family: "Noto Sans JP";
+  color: #8f8f8f;
+  padding: 10px 0;
+}
+
+.table_year {
+  width: 32%;
+}
+
 /* PC用 */
 @media screen and (min-width: 768px) {
   .sf {
@@ -89,6 +104,10 @@ header {
 @media screen and (max-width: 767px) {
   .pc {
     display: none;
+  }
+
+  td {
+    font-size: 0.8em;
   }
 }
 
@@ -179,7 +198,7 @@ header {
 
 .wrap h3 {
   font-size: 1.3em;
-  margin: 32px 0;
+  margin: 32px 0 16px;
 }
 
 .wrap p {
@@ -190,7 +209,7 @@ header {
 }
 
 .content2 {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .content2 a {
@@ -199,7 +218,7 @@ header {
 }
 
 .content2 span {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-right: 10px;
   font-weight: 200;
 }
