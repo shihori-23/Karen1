@@ -41,7 +41,7 @@
         </div>
         </header>
         <!-- スマホ用のメニュー -->
-        <div class="sf_nav_container　sf" id="menu_bar">
+        <div class="sf_nav_container sf" id="menu_bar">
             <ul class="sf_nav">
                 <li class="nav_li"><a href="/">home</a></li>
                 <li class="nav_li active"><a href="">about</a></li>
@@ -59,12 +59,31 @@
             <div class="content1">
                 <h2>- about</h2>
                 <h3>鈴木 かれん</h3>
-                <p>1991年　兵庫県神戸市出身</p>
-                <p>2014年　玉川大学　卒業</p>
-                <p>2017年　株式会社ZOZO　退社</p>
-                <p>2018年　バンタンデザイン研究所　卒業</p>
-                <p>2017年　ヘアメイク村上綾氏　師事</p>
-                <p>2020年　独立</p>
+                <table>
+                <tr>
+                    <td class="table_year">1991</td>
+                    <td>兵庫県出身</td>
+                </tr>
+                <tr>
+                    <td>2014</td>
+                    <td>玉川大学　卒業</td>
+                </tr>
+                <tr>
+                    <td>2014-17</td>
+                    <td>株式会社ZOZO</td>
+                <tr>
+                    <td>2017-18</td>
+                    <td>バンタンデザイン研究所</td>
+                </tr>
+                <tr>
+                    <td>2017-20</td>
+                    <td>ヘアメイク村上綾氏　師事</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>独立</td>
+                </tr>
+                </table>
             </div>
             <div class="content2">
                 <a href="https://instagram.com/karen___lemon?igshid=468qtrxzr564"><span><i class="fab fa-instagram"></i></span><span>Instagram</span></a>
